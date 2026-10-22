@@ -1,0 +1,23 @@
+server:
+  address: 127.0.0.1
+  port: 8080
+spring:
+  application:
+    name: query-optimization-showcase
+  datasource:
+    url: jdbc:h2:mem:queryoptimization;DB_CLOSE_DELAY=-1
+    username: sa
+    password: ""
+  sql:
+    init:
+      mode: always
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        generate_statistics: false
+  mvc:
+    problemdetails:
+      enabled: true
